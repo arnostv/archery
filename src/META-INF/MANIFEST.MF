@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Class-Path: hibernate-annotations-3.5.6-Final.jar hibernate-core-3.5.6
+ -Final.jar antlr-2.7.6.jar commons-collections-3.1.jar dom4j-1.6.1.ja
+ r xml-apis-1.0.b2.jar jta-1.1.jar slf4j-api-1.5.8.jar hibernate-commo
+ ns-annotations-3.2.0.Final.jar hibernate-jpa-2.0-api-1.0.0.Final.jar 
+ hibernate-entitymanager-3.5.6-Final.jar hibernate-core-3.5.6-Final.ja
+ r antlr-2.7.6.jar commons-collections-3.1.jar dom4j-1.6.1.jar xml-api
+ s-1.0.b2.jar jta-1.1.jar slf4j-api-1.5.8.jar hibernate-annotations-3.
+ 5.6-Final.jar hibernate-commons-annotations-3.2.0.Final.jar hibernate
+ -jpa-2.0-api-1.0.0.Final.jar cglib-2.2.jar asm-3.1.jar javassist-3.9.
+ 0.GA.jar guava-11.0.1.jar
+Main-Class: 
+

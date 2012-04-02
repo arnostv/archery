@@ -1,11 +1,16 @@
 package me.arnost.hibernatemetadata;
 
 
-public class ClassAnnotated {
+import javax.persistence.*;
+
+@Entity
+@Table(name="person")
+public class ClassAnnotatedJpa {
     private int id;
     private String name;
     private String email;
 
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE,  generator = "SEQ_PERSON_GEN") @SequenceGenerator(name = "SEQ_PERSON_GEN", sequenceName = "SEQ_PERSON")
     public int getId() {
         return id;
     }
@@ -22,6 +27,7 @@ public class ClassAnnotated {
         this.name = name;
     }
 
+    @Column(name = "EMAIL_ADDRESS")
     public String getEmail() {
         return email;
     }
