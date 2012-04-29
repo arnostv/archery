@@ -14,8 +14,9 @@ public class LocalClassloader extends ClassLoader {
 
     @Override
     public Class<?> loadClass(String name) throws ClassNotFoundException {
+
+        //loading siblings - from same package as this classloader, otherwise use parent classloader
         if (name.startsWith(getClass().getPackage().getName())) {
-            //loading siblings
             String classPath = name.replace('.', separatorChar) + ".class";
             InputStream is = super.getResourceAsStream(classPath);
             try {
@@ -34,7 +35,6 @@ public class LocalClassloader extends ClassLoader {
                     throw new ClassNotFoundException("Error closing input stream " + e.getLocalizedMessage(),e);
                 }
             }
-
         } else {
             return super.loadClass(name);
         }
